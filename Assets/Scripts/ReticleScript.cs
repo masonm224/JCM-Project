@@ -41,7 +41,7 @@ public class ReticleScript : MonoBehaviour
         }
     }
 
-    private void Aim()
+    public void Aim()
     {
         var (success, position) = FollowMousePosition();
         if (success)

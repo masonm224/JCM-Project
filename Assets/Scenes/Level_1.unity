@@ -333,7 +333,7 @@ Transform:
   m_GameObject: {fileID: 904935679}
   serializedVersion: 2
   m_LocalRotation: {x: 0.5256938, y: -0, z: -0, w: 0.8506739}
-  m_LocalPosition: {x: 0, y: 7.99, z: -10.64}
+  m_LocalPosition: {x: 0, y: 16.33, z: -10.64}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -394,7 +394,6 @@ GameObject:
   - component: {fileID: 1467165679}
   - component: {fileID: 1467165678}
   - component: {fileID: 1467165677}
-  - component: {fileID: 1467165676}
   - component: {fileID: 1467165675}
   m_Layer: 0
   m_Name: Cube
@@ -418,27 +417,6 @@ MonoBehaviour:
   groundLayer:
     serializedVersion: 2
     m_Bits: 8
---- !u!65 &1467165676
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1467165674}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &1467165677
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -504,7 +482,7 @@ Transform:
   m_GameObject: {fileID: 1467165674}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: -0, y: 0.39, z: 0.83}
+  m_LocalPosition: {x: 0.04, y: 0.39, z: 0.73}
   m_LocalScale: {x: 1.2244457, y: 0.10205794, z: 0.33709}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -557,6 +535,7 @@ GameObject:
   - component: {fileID: 1620801408}
   - component: {fileID: 1620801413}
   - component: {fileID: 1620801414}
+  - component: {fileID: 1620801415}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -670,6 +649,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1467165679}
+  - {fileID: 1775690686}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1620801413
@@ -717,6 +697,66 @@ MonoBehaviour:
   groundLayer:
     serializedVersion: 2
     m_Bits: 8
+--- !u!114 &1620801415
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1620801407}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dcbb23c32f7c18d4bafa8572cf0b7736, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerShoot
+  FirePoint: {fileID: 1775690686}
+  bulletPrefab: {fileID: 6831989194994568837, guid: 6abfffc090f5b6c439512103453c2194, type: 3}
+--- !u!1 &1775690685
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1775690686}
+  - component: {fileID: 1775690687}
+  m_Layer: 0
+  m_Name: BulletSpawn
+  m_TagString: BulletSpawn
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1775690686
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1775690685}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.14, y: 0.39, z: 1.62}
+  m_LocalScale: {x: 1.2244457, y: 0.10205794, z: 0.33708996}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1620801412}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1775690687
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1775690685}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dcbb23c32f7c18d4bafa8572cf0b7736, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerShoot
+  FirePoint: {fileID: 1775690686}
+  bulletPrefab: {fileID: 0}
 --- !u!1 &2026322982
 GameObject:
   m_ObjectHideFlags: 0
@@ -746,7 +786,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -1, y: 0, z: 1.66}
-  m_LocalScale: {x: 2.3435, y: 2.3435, z: 2.3435}
+  m_LocalScale: {x: 4.166274, y: 4.166274, z: 4.166274}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1588969707}
