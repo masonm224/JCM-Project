@@ -5,7 +5,7 @@ public class ReticleScript : MonoBehaviour
 {
     private Camera mainCamera;
 
-    //This makes a layer mask that we can assign in the inspector, helps with aiming the reticle
+                   //This makes a layer mask that we can assign in the inspector, helps with aiming the reticle
     [SerializeField] private LayerMask groundLayer;
 
     void Start()
