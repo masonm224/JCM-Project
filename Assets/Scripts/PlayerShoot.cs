@@ -5,7 +5,7 @@ using UnityEngine.InputSystem;
 
 public class PlayerShoot : MonoBehaviour
 {
-                //This allows you to assign a FirePoint in the inspector
+                //This allows you to assign a FirePoint in the inspector (invisible object for direction of bullet travel)
    public Transform FirePoint;
 
     PlayerInput playerInput;
@@ -21,7 +21,7 @@ public class PlayerShoot : MonoBehaviour
         
         playerInput = GetComponent<PlayerInput>();
 
-        //Searching witin the InputActionSystem for the Action Labeled -PistolShoot-
+        //Searching witin the InputActionSystem for the Action Labeled -ShootPistol-
         ShootPistol = playerInput.actions.FindAction("ShootPistol");
 
 
@@ -37,7 +37,7 @@ public class PlayerShoot : MonoBehaviour
             Shooting();
         }
 
-//==============
+//============== 
     if (ShootPistol == null)
     {
         Debug.Log("ShootPistol is NULL");
@@ -47,7 +47,6 @@ public class PlayerShoot : MonoBehaviour
     if (ShootPistol.WasPressedThisFrame())
     {
         Debug.Log("Mouse Click Detected");
-        Shooting();
     }
         //===============
     }
