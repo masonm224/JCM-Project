@@ -1,12 +1,14 @@
 using UnityEngine;
 
-//Important for running the Co
+//Important for running the Coroutine
 using System.Collections;
 
 public class EnemyShoot : MonoBehaviour
 {
+    //Health Functions
+    private Health health;
 
-        //This allows you to assign a FirePoint in the inspector (invisible object for direction of bullet travel)
+    //This allows you to assign a FirePoint in the inspector (invisible object for direction of bullet travel)
     public Transform FirePoint;
 
     //Prefab Variant of player bullet
@@ -17,6 +19,9 @@ public class EnemyShoot : MonoBehaviour
     
     void Start()
     {
+        //Health functions
+        health = GetComponent<Health>();
+
         //This makes every new enemy with this script know players location without needing to assign in inspector everytime
         TargetForEnemy = GameObject.FindGameObjectWithTag("Player").transform;
 
@@ -62,8 +67,12 @@ public class EnemyShoot : MonoBehaviour
 
     public void EnemyShooting()
     {
-
         Instantiate(EnemyBullet, FirePoint.position, FirePoint.rotation);
-
     }   
+
+    public void TakeDamage(float damage)
+    {
+        health.TakeDamage(damage);
+        Debug.Log("DamageTaken");//------------------
+    }
 }

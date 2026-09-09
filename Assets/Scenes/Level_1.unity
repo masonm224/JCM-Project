@@ -1925,6 +1925,7 @@ GameObject:
   - component: {fileID: 1620801413}
   - component: {fileID: 1620801414}
   - component: {fileID: 1620801415}
+  - component: {fileID: 1620801416}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -1960,8 +1961,8 @@ CapsuleCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: 0.5
@@ -2101,6 +2102,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::PlayerShoot
   FirePoint: {fileID: 1775690686}
   bulletPrefab: {fileID: 6831989194994568837, guid: 6abfffc090f5b6c439512103453c2194, type: 3}
+--- !u!114 &1620801416
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1620801407}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0ff35aa9f586f4347a65c5acd33205e0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Health
+  maxHealth: 100
 --- !u!4 &1621350616 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8688084061820802204, guid: c4d15bad9f03d2645814c8cfcf7cdfc7, type: 3}
@@ -2545,10 +2559,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 3605726101598104109, guid: 80847389f3e7bdc4fba51001e7ea864a, type: 3}
-      propertyPath: TargetForEnemy
-      value: 
-      objectReference: {fileID: 1679444289}
     - target: {fileID: 6053893285913040652, guid: 80847389f3e7bdc4fba51001e7ea864a, type: 3}
       propertyPath: m_LocalPosition.x
       value: -6.3360147
@@ -2592,6 +2602,10 @@ PrefabInstance:
     - target: {fileID: 6410241790389811600, guid: 80847389f3e7bdc4fba51001e7ea864a, type: 3}
       propertyPath: m_Name
       value: RangedEnemy
+      objectReference: {fileID: 0}
+    - target: {fileID: 8977539529610792577, guid: 80847389f3e7bdc4fba51001e7ea864a, type: 3}
+      propertyPath: maxHealth
+      value: 100
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

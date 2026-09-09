@@ -9,11 +9,18 @@ public class PlayerMovement : MonoBehaviour
     PlayerInput playerInput;
     InputAction moveAction;
 
+    //Health Functions  
+    private Health health;
+
 
     [SerializeField] float speed = 5;
 
     void Start()
     {
+    //Health Functions
+        health = GetComponent<Health>();
+
+    //Input Functions
         playerInput = GetComponent<PlayerInput>();
         
         //Searching witin the InputActionSystem for the Action Labeled -Move-
@@ -32,5 +39,11 @@ public class PlayerMovement : MonoBehaviour
 
         //Moves the player position when the vector is recieved from the input system
         transform.position += new Vector3(direction.x, 0, direction.y) * speed * Time.deltaTime;
+    }
+
+    //Health Functions
+    public void TakeDamage(float damage)
+    {
+        health.TakeDamage(damage);
     }
 }
