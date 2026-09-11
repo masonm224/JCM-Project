@@ -151,6 +151,7 @@ GameObject:
   - component: {fileID: 6484942718186537881}
   - component: {fileID: 3605726101598104109}
   - component: {fileID: 8977539529610792577}
+  - component: {fileID: 7159253445455765433}
   m_Layer: 0
   m_Name: RangedEnemy
   m_TagString: Enemy
@@ -280,3 +281,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Health
   maxHealth: 100
+--- !u!114 &7159253445455765433
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6410241790389811600}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5a91e52e8f2d11f4e8bf6bf8f6b4bc90, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::EnemyMovement
+  preferredDistance: 8
+  directionChangeTime: 2
+  moveSpeed: 2
+  targetForEnemy: {fileID: 0}

@@ -2603,9 +2603,29 @@ PrefabInstance:
       propertyPath: m_Name
       value: RangedEnemy
       objectReference: {fileID: 0}
-    - target: {fileID: 8977539529610792577, guid: 80847389f3e7bdc4fba51001e7ea864a, type: 3}
-      propertyPath: maxHealth
-      value: 100
+    - target: {fileID: 7159253445455765433, guid: 80847389f3e7bdc4fba51001e7ea864a, type: 3}
+      propertyPath: moveSpeed
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 7159253445455765433, guid: 80847389f3e7bdc4fba51001e7ea864a, type: 3}
+      propertyPath: strafeAmount
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7159253445455765433, guid: 80847389f3e7bdc4fba51001e7ea864a, type: 3}
+      propertyPath: targetForEnemy
+      value: 
+      objectReference: {fileID: 1679444289}
+    - target: {fileID: 7159253445455765433, guid: 80847389f3e7bdc4fba51001e7ea864a, type: 3}
+      propertyPath: strafeChangeTime
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7159253445455765433, guid: 80847389f3e7bdc4fba51001e7ea864a, type: 3}
+      propertyPath: preferredDistance
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 7159253445455765433, guid: 80847389f3e7bdc4fba51001e7ea864a, type: 3}
+      propertyPath: directionChangeTime
+      value: 1.5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
